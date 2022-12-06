@@ -26,8 +26,7 @@ class validador extends FormRequest
         return [
             'txtUsuario'=>'required',
             'txtCompu'=>'required',
-            'txtTiempo'=>'required',
-            'txtFecha'=>'required'
+            'txtTiempo'=>'required'
         ];
     }
 }

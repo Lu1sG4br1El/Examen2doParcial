@@ -41,11 +41,6 @@
                 <input type="text" class="form-control" name="txtTiempo" value="{{old('txtTiempo')}}">
                 <p class="fw-bold text-danger"> {{$errors->first('txtTiempo')}}</p>
             </div>
-            <div>
-                <label class="form-label text-center text-light" name="labelFecha">Fecha: </label>
-                <input type="text" class="form-control" name="txtFecha" value="{{old('txtFecha')}}">
-                <p class="fw-bold text-danger"> {{$errors->first('txtFecha')}}</p>
-            </div>
     </div>
         <div>
             <button type="submit" name="btnGuardar">Guardar</button>
