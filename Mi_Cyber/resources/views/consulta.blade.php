@@ -1,38 +1,28 @@
 @extends('plantilla')
 @section('contenido')
-<h1 class = "mt-4 display-1 text-center text-light">Consulta</h1>
+<h1 class = "mt-4 display-1 text-center text-light"> <i class="bi bi-card-checklist"></i> Consulta <h1>
 <body style="background-color: #8b0000">
-</ul>
-<div class="container text-center w-50">
-<table class="table table-dark">
-    <thead>
-        <tr>
-            <th scope="col">Usuario</th>
-            <th scope="col">Numero de compu</th>
-            <th scope="col">Tiempo</th>
-            <th scope="col">Fecha</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Luis</td>
-            <td>1</td>
-            <td>30</td>
-            <td>08/11/2022</td>
-        </tr>
-        <tr>
-            <td>Gabriel</td>
-            <td>2</td>
-            <td>40</td>
-            <td>08/11/2022</td>
-        </tr>
-        <tr>
-            <td>Gabo</td>
-            <td>7</td>
-            <td>60</td>
-            <td>08/11/2022</td>
-        </tr>
-        </tbody>
-    </table>
-</div>
+<body style="background-color: # ">
+<div class="container col-md-6">
+    <table class="table table-dark table-borderless">
+    <tr>
+    <th scope="col">ID</th>
+    <th scope="col">Usuario</th>
+    <th scope="col">No. Compu</th>
+    <th scope="col">Tiempo</th>
+    <th scope="col">Acciones</th>
+    </tr>
+    @foreach ($consultarCompu as $buscarComputadora)
+    <tr>
+    <th>{{ $buscarComputadora->idC }}</th>
+    <td>{{ $buscarComputadora->usuario }}</td>
+    <td>{{ $buscarComputadora->Ncompu }}</td>
+    <td>{{ $buscarComputadora->fecha }}</td>
+    <td>
+        <a href="{{ route('listaCompu.edit', $buscarComputadora->idC) }}" class="btn btn-outline-warning">Editar <i class="bi bi-pencil"></i></a>
+        <a href="{{ route('listaCompu.confirm', $buscarComputadora->idC) }}" class="btn btn-outline-danger">Borrar <i class="bi bi-trash"></i></a>
+    </td>
+    </tr>
+    @endforeach
+</table>
 @stop

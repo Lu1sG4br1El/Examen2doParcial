@@ -16,18 +16,16 @@
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
 	    <span class="navbar-toggler-icon"></span>
 	  </button>
-	  <a class="nav-link {{ request()->routeIs('NFormulario') ?'text-warning ':'' }}" href="/formulario">Formulario</a>
+	  <a class="nav-link {{ request()->routeIs('listaCompu.create') ?'text-warning ':'' }}" href="{{ route('listaCompu.create') }}">Formulario</a>
 	  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
 	    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 	      <li class="nav-item active">
-	      <a class="nav-link {{ request()->routeIs('NConsulta') ?'text-warning ':'' }}" href="consulta">Consulta</a>
+	      <a class="nav-link {{ request()->routeIs('listaCompu.index') ?'text-warning ':'' }}" href="{{ route('listaCompu.index') }}">Consulta</a>
 	      </li>
 	    </ul>
 	  </div>
 	</nav>
 	@yield('contenido')
-
-
-	            <footer class="text-center text-light">▷ 0:23 ━━━━━━⬤────────────────── 05:55 │ ⇆◁ || ▷ ↺</footer>
+	<footer class="text-center text-light">G4B0</footer>
 	</body>
 </html>
